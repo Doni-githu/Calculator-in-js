@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(./Fonts/Roboto/Roboto-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+
+.ota {
+    width: 300px;
+    height: 500px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 34px;
+    margin: 100px auto;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 5px 5px 5px silver;
+    &>.screen{
+        height: 125px;
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        font-size: 4rem;
+        margin-bottom:25px;
+    }
+    &>.buttons {
+        display: grid;
+        grid-template-areas:
+            "ac plus__minus prot del"
+            "seven eight nine mylty"
+            "four five six minus"
+            "one two tree plus"
+            "zero zero nuqta  rav";
+            grid-gap:5px ;
+    
+        &>.btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: gray;
+            text-align: center;
+            line-height: 60px;
+            cursor: pointer;
+            user-select: none;
+        }
+        &>.btn:hover{
+            filter: brightness(120%);
+        }
+        &>.btn:active{
+            filter: brightness(80%);
+        }
+        &>.btn.bg-orange {
+            background: orange;
+        }
+        &>.zero{
+            width: 100%;
+            grid-area: zero;
+            border-radius: 34px;
+        }
+        &>.btn.bg-grey {
+            background-color: silver;
+        }
+    }
+}
